@@ -1,17 +1,18 @@
 package Traza1;
 
-import lombok.Data;
-import lombok.AllArgsConstructor;
-import lombok.ToString;
+import lombok.*;
+
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Builder
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
 @ToString
 public class Pais {
-    private Long identificacion;
+    private Long id;
     private String nombre;
     private Set<Provincia> provincias = new HashSet<>();
 }

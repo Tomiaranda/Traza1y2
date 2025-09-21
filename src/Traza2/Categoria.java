@@ -1,24 +1,24 @@
-package Traza1;
+package Traza2;
 
 import lombok.Data;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import lombok.experimental.SuperBuilder;
+
 import java.util.HashSet;
 import java.util.Set;
-import lombok.ToString;
-
 
 @Data
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString(exclude = "provincia")
-public class Localidad {
+@ToString
+public class Categoria {
     private Long id;
-    private String nombre;
-    private Set<Domicilio> domicilios = new HashSet<>();
+    private String denominacion;
 
-    private Provincia provincia;
+    private Set<Articulo> articulos = new HashSet<>();
 }
+
 
